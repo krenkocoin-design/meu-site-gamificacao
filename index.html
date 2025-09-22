@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Setup VWAP 3/10 - Teste</title>
+
+  <!-- CSS modularizado -->
+  <link rel="stylesheet" href="assets/css/global/base.css" />
+  <link rel="stylesheet" href="assets/css/global/componentes.css" />
+  <link rel="stylesheet" href="assets/css/global/layout.css" />
+  <link rel="stylesheet" href="assets/css/pages/simulador.css" />
+  <link rel="stylesheet" href="assets/css/pages/etapas.css" />
+</head>
+<body>
+
+  <!-- Etapa 1 -->
+  <section class="painel show" id="etapa1">
+    <div class="progresso"><div class="barra" style="width: 0%"></div></div>
+    <p class="porcentagem">0% concluído</p>
+    <h2>🎯 Descubra seu perfil de trader</h2>
+    <p>Você está operando como um <strong>sniper</strong> — estratégico e preciso —
+    ou ainda como um amador que age no escuro?</p>
+    <p>Responda 2 perguntas rápidas e receba um <u>diagnóstico exclusivo</u> + descubra
+    como aplicar o <strong>Setup VWAP 3/10</strong> para aumentar suas chances de acerto.</p>
+    <button class="btn primary" id="btn-etapa1">🚀 Iniciar Teste Agora</button>
+    <small class="urgencia">⚡ Apenas 25 vagas ativas hoje</small>
+  </section>
+
+  <!-- Etapa 2 -->
+  <section class="painel hidden" id="etapa2">
+    <div class="progresso"><div class="barra" style="width: 50%"></div></div>
+    <p class="porcentagem">50% concluído</p>
+    <h2>📊 Qual é o seu maior desafio ao operar?</h2>
+    <p>Escolha a opção que mais representa sua realidade atual:</p>
+    <ul>
+      <li><button class="btn success proxima">Saber o momento certo de entrar</button></li>
+      <li><button class="btn success proxima">Controlar o emocional durante a operação</button></li>
+      <li><button class="btn success proxima">Fazer uma boa gestão de risco</button></li>
+    </ul>
+  </section>
+
+<!-- Etapa 2.5 - Simulador -->
+<section class="painel hidden" id="etapa-simulador">
+  <div class="progresso"><div class="barra" style="width: 75%"></div></div>
+  <p class="porcentagem">75% concluído</p>
+  <h2>📈 Analise o gráfico e decida rápido!</h2>
+  <p id="preco-atual" style="font-size:1.2em; margin-bottom:10px;">Preço: 5500.00</p>
+  
+  <div id="grafico-container" style="position: relative;">
+    <canvas id="grafico" width="400" height="150" style="background:#111; border-radius:8px;"></canvas>
+    <!-- Botão Zerar que acompanha o gráfico -->
+    <button id="btn-zerar"></button>
+    <!-- Feedback flutuante -->
+    <div id="feedback-lucro" class="hidden"></div>
+  </div>
+
+  <p>O que você faria agora?</p>
+  <div id="botoes-operacao">
+    <button class="btn success" id="btn-comprar">Comprar</button>
+    <button class="btn primary" id="btn-vender">Vender</button>
+    <button class="btn danger hidden" id="btn-zerar-extra">Zerar Operação</button>
+  </div>
+  <p id="lucro-prejuizo" style="margin-top:15px; font-weight:bold;"></p>
+  <p id="historico-total" style="margin-top:10px; font-size:0.95em; color:#ccc;"></p>
+</section>
+
+
+  <!-- Etapa 2.8 - Carregamento -->
+  <section class="painel hidden" id="etapa-loading">
+    <h2>⏳ Gerando seu diagnóstico...</h2>
+    <div class="progresso">
+      <div class="barra" id="barra-loading" style="width: 0%"></div>
+    </div>
+    <p class="porcentagem" id="percent-loading">0%</p>
+  </section>
+
+  <!-- Etapa 3 -->
+  <section class="painel hidden" id="etapa3">
+    <div class="progresso"><div class="barra" style="width: 100%"></div></div>
+    <p class="porcentagem">100% concluído</p>
+    <h2>🚫 Diagnóstico: você ainda não opera como sniper</h2>
+    <p>Seu maior desafio está impedindo você de lucrar de forma consistente. 
+    Mas existe um caminho comprovado para virar o jogo.</p>
+    <button class="btn primary" id="btn-oferta">🔥 Ver Método VWAP 3/10</button>
+  </section>
+
+  <!-- JS modularizado -->
+  <script src="assets/js/fluxo.js"></script>
+  <script src="assets/js/simulador.js"></script>
+  <script src="assets/js/gamificacao.js"></script>
+  <script src="assets/js/tracking.js"></script>
+</body>
+</html>
